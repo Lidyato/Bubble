@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Vegans - Babble</title>
+	</head>
+
+	<body>
+		<header>
+            <img src="images/logo.gif" aria-label="Babble - Talk freely" alt="Babble - Talk freely"/>
+		</header>
+
+        <section>
+            <h1>Vegans</h1>
+
+            <nav></nav>
+            
+            <main>
+                <header class="chat-room-info">
+                    <h1 aria-label="Vegans">Vegans</h1>
+
+                    <dl class="chat-room-counters">
+                        <dt><span aria-label="Number of Messages in chat room"></span></dt>
+                        <dd class="chat-room-counters-messages"><img alt="Users" src="images/messages.png" /><span class="messages-counter"></span></dd>
+                        <dt><span aria-label="Number of Users in chat room"></span></dt>
+                        <dd class="chat-room-counters-users"><img alt="Messages" src="images/users.png" /><span class="users-counter"></span></dd>
+                    </dl>
+                </header>
+
+                <ol aria-label="Chat Messages List" class="messages-board" id="messages-board"> </ol>
+
+                <footer class="form-container">
+                    <form method="POST" action="http://localhost:9000" class="js-growable">
+                        <div class="expanding-textarea">
+                            <pre><span></span></pre>
+                            <textarea name="message-content" placeholder="Share your thoughts.." aria-label="write new Message" ></textarea>
+                        </div>
+                        <input alt="Send New Message" aria-label="Send New Message" class="submit-button" type="image" src="images/send.gif" />
+                    </form>
+                </footer>
+            </main>
+        </section>
+		
+		<!--Login Form-->
+        <div class="modal-popup">
+            <div class="modal" id="login-form">
+                <h1 aria-label="Who are you?">Who are you?</h1>
+                <form action="#">
+                    <table>
+                        <tr>
+                            <td class="details"><label for="name">Full name:</label></td>
+                            <td class="details-input"><input type="text" id="name" aria-label="Full Name" /></td>
+                        </tr>
+                        <tr>
+                            <td class="details"><label for="email">Email:</label></td>
+                            <td class="details-input"><input type="email" id="email" aria-label="Email Address" /></td>
+                        </tr>
+                    </table>
+                    <div class="form-controls">
+                        <button class="annonimize" aria-label="Stay Anonymous">Stay Anonymous</button>
+                        <button class="confirm" aria-label="Save Details">Save</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        
+        <script async type="text/javascript" src="scripts/main.js"></script>
+        <noscript id="deferred-styles">
+            <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Nunito">
+            <link rel="stylesheet" type="text/css" href="styles/main.css">
+        </noscript>
+	</body>
+</html>

@@ -1,0 +1,61 @@
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mocha Tests</title>
+    <link rel="stylesheet" href="../../node_modules/mocha/mocha.css" /> 
+    <script type="text/javascript" src="../../node_modules/mocha/mocha.js"></script> 
+    <script type="text/javascript" src="../../node_modules/chai/chai.js"></script> 
+    <script type="text/javascript" src="../../node_modules/sinon/pkg/sinon.js"></script>
+  </head>
+  <body>
+    <div id="mocha"></div>
+
+    <script type="text/javascript">
+      mocha.setup('bdd');
+    </script>
+    <script type="text/javascript" src="../../client/scripts/main.js"></script>
+    <script type="text/javascript" src="test.js"></script>
+    <script>
+      mocha.checkLeaks();
+      mocha.run();
+    </script>
+
+    <!-- registration / login form -->
+    <!-- will appear only if user hasn't signed in with an email address yet -->
+    <div class="modal-overlay">
+        <div class="modal" id="registration-form">
+            <h1 aria-label="Who are you?">Who are you?</h1>
+            <form action="#">
+                <table>
+                    <tr>
+                        <td class="first-col"><label for="name">Full name:</label></td>
+                        <td class="last-col"><input type="text" id="name" aria-label="Full Name" /></td>
+                    </tr>
+                    <tr>
+                        <td class="first-col"><label for="email">Email:</label></td>
+                        <td class="last-col"><input type="email" id="email" aria-label="Email Address" /></td>
+                    </tr>
+                </table>
+                <div class="form-controls">
+                    <button class="discard" aria-label="Stay Anonymous">Stay Anonymous</button>
+                    <button class="confirm" aria-label="Save Details">Save</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <span class="messages-counter"></span>
+    <span class="users-counter"></span>
+
+    <form method="POST" action="http://localhost:9000" class="js-growable">
+        <div class="expanding-textarea">
+            <pre><span></span><br></pre>
+            <textarea name="message-content" placeholder="Type a message" aria-label="New Message Content" ></textarea>
+        </div>
+        <input class="submit-button" type="submit" />
+    </form>
+
+    <noscript id="deferred-styles">
+    </noscript>
+  </body>
+</html>
