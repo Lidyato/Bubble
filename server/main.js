@@ -45,8 +45,6 @@ http.createServer(function (request, response) {
             switch (requestedUrl.href) {
                 case "/login":
                     userLogin(request, response);
-					console.log("userID = " + userID);
-					console.log("usersCounter = " + usersCounter);
 					break;
 					
                 case "/logout": 
@@ -66,7 +64,6 @@ http.createServer(function (request, response) {
 					break;
 					
                 case "/stats": // get stats request
-					console.log("users case stats= " + usersCounter);
 					getStatsReq(response);
 					break;
 					
@@ -159,7 +156,6 @@ function userLogout (request, response){
 		var client = Babble.messagesClients.pop();
 		client.response.end(JSON.stringify([ ]));
 	}
-
 	response.end(); 
 };
 
