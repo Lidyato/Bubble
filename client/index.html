@@ -13,9 +13,7 @@
 
         <section>
             <h1>Vegans</h1>
-
             <nav></nav>
-            
             <main>
                 <header class="chat-room-info">
                     <h1 aria-label="Vegans">Vegans</h1>
@@ -47,16 +45,14 @@
             <div class="modal" id="login-form">
                 <h1 aria-label="Who are you?">Who are you?</h1>
                 <form action="#">
-                    <table>
-                        <tr>
-                            <td class="details"><label for="name">Full name:</label></td>
-                            <td class="details-input"><input type="text" id="name" aria-label="Full Name" /></td>
-                        </tr>
-                        <tr>
-                            <td class="details"><label for="email">Email:</label></td>
-                            <td class="details-input"><input type="email" id="email" aria-label="Email Address" /></td>
-                        </tr>
-                    </table>
+					<div class="input-rows">
+						<label for="name">Full name:</label>
+						<input type="text" id="name" aria-label="Full Name" />
+					</div>
+					<div class="input-rows">
+						<label for="email">Email:</label>
+						<input type="email" id="email" aria-label="Email Address" />
+					</div>
                     <div class="form-controls">
                         <button class="annonimize" aria-label="Stay Anonymous">Stay Anonymous</button>
                         <button class="confirm" aria-label="Save Details">Save</button>
@@ -65,11 +61,8 @@
             </div>
         </div>
 
-        
         <script async type="text/javascript" src="scripts/main.js"></script>
-        <noscript id="deferred-styles">
-            <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Nunito">
-            <link rel="stylesheet" type="text/css" href="styles/main.css">
-        </noscript>
+		<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Nunito">
+        <link rel="stylesheet" type="text/css" href="styles/main.css">
 	</body>
 </html>

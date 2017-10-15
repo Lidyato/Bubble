@@ -8,6 +8,7 @@ body {
     overflow: hidden;
     display: flex;
     flex-direction: column;
+	font-family: 'Nunito', sans-serif;
 }
 
 body > header {
@@ -83,7 +84,6 @@ section main .form-container {
     padding: 0;
     display: inline;
     color: #292929;
-    font-family: 'Nunito', sans-serif;
     font-size: 14pt;
     font-weight: normal;
 }
@@ -97,7 +97,6 @@ section main .form-container {
     display: inline;
     vertical-align: middle;
     color: #353744;
-    font-family: 'Nunito', sans-serif;
     font-size: 9pt;
     font-weight: bold;
     word-wrap: break-word;
@@ -110,7 +109,7 @@ section main .form-container {
 }
 
 .messages-board .message .avatar {
-    border: 0 solid transparent;
+    border: 1px solid #e6e6e6;
     border-radius: 50%;
     width: 1.8em;
     height: 1.8em;
@@ -119,14 +118,13 @@ section main .form-container {
 
 .messages-board .message .message-body {
     background-color: #ffffff;
-    margin-left: 8px;
     border: 1px solid #DFDFDF;
     border-radius: 10px;
-    padding: 0.2em 0.4em 0.2em 0.4em;
+    margin-left: 8px;
+	padding: 0.2em 0.4em 0.2em 0.4em;
     max-width: 600px;
     display: inline-block;
     vertical-align: top;
-    font-family: 'Nunito', sans-serif;
     white-space: pre-wrap;
 }
 
@@ -143,17 +141,15 @@ section main .form-container {
 }
 
 .message-body cite {
-    margin: auto 0;
-    font-family: 'Nunito', sans-serif;
     font-size: 0.75em;
     font-weight: bold;
     font-style: normal;
+	margin: auto 0;
 }
 
 .message-body time {
     margin: auto 0.7em;
     flex: 1;
-    font-family: 'Nunito', sans-serif;
     font-size: 0.7em;
     font-weight: normal;
 }
@@ -173,15 +169,10 @@ section main .form-container {
 
 .message-body p {
     margin: 0;
-    font-family: 'Nunito', sans-serif;
     font-size: 0.75em;
     font-weight: normal;
 }
 
-.form-container form {
-    max-height: 300px;
-    display: flex;
-}
 
 .expanding-textarea {
     min-width: 1em;
@@ -193,13 +184,13 @@ section main .form-container {
 .expanding-textarea pre {
     box-sizing: border-box;
     background: transparent;
-    font-family: 'Nunito', sans-serif;
     white-space: pre-wrap;
     word-wrap: break-word;
 }
 
 .expanding-textarea textarea {
     background-color: #FFFFFF;
+		font-family: 'Nunito', sans-serif;
     width: 100%;
     height: 100%;
     position: absolute;
@@ -216,11 +207,7 @@ section main .form-container {
     visibility: hidden;
 }
 
-.expanding-textarea pre span {
-    width: 100%;
-}
-
-.form-container form .submit-button {
+footer form .submit-button {
     margin-top: auto;
     margin-bottom: auto;
     margin-left: 1em;
@@ -229,18 +216,24 @@ section main .form-container {
     flex: 0 1 content;
 }
 
+footer form {
+    max-height: 300px;
+    display: flex;
+}
+
+
 /* Registration Modal-popup Style */
 .modal-popup {
-	background-color: rgba(0, 0, 0, 0.5);
+	background-color: rgba(0, 0, 0, 0.6);
     width: 100%;
 	height: 100%;
 	display: none;
     visibility:hidden;
     position: fixed;
+	text-align: center;
 	top: 0;
 	left: 0;
     z-index: 2;
-    text-align: center;
 }
 
 .modal-popup:target {
@@ -249,10 +242,10 @@ section main .form-container {
 
 .modal {
     background-color: #F9F9F9;
+	border: 1px solid #C9C9CA;
     overflow-y: auto;
     overflow-x: hidden;
     margin: auto;
-    border: 1px solid #C9C9CA;
     border-radius: 3px;
     display: inline-flex;
     flex-direction: column;
@@ -266,10 +259,9 @@ section main .form-container {
 .modal h1 {
     margin: 0;
     padding: 0;
-    flex: 0 0 content;
     color: #292929;
-    font-family: 'Nunito', sans-serif;
     font-size: 14pt;
+	flex: 0 0 content;
     font-weight: normal;
     text-align: left;
 }
@@ -282,18 +274,14 @@ section main .form-container {
     text-align: right;
 }
 
-.modal form table {
-    text-align: left;
-}
-
 .modal label, .modal input {
     display: inline;    
-    font-family: 'Nunito', sans-serif;
 }
 
 .modal form label {
     color: #616161;
     vertical-align: middle;
+	text-align: left;
 }
 
 .modal form input {
@@ -319,7 +307,6 @@ section main .form-container {
     margin: 0.3em 0.2em;
     min-width: 5em;
     display: inline-block;
-    font-family: 'Nunito', sans-serif;
     font-size: 1.1em;
     font-weight: 500;
 }
@@ -395,13 +382,12 @@ section main .form-container {
         height: 80%;
         word-break: break-all;
     }
-    .modal form table {
-        max-width: 100%;
-    }
+
 	.modal form label 	{
         padding: 5%;
     }
-    .modal form table td {
+    .modal form label,
+	.modal form input {
         display: block;
     }
     .modal form input,
@@ -452,8 +438,10 @@ section main .form-container {
     }
 	.modal form label {
         padding: 1.5em 1px 1px 1px;
+		text-align: left;
     }
-    .modal form table td {
+    .modal form label,
+	.modal form input {
         display: table;
     }
 }
@@ -490,10 +478,24 @@ section main .form-container {
         width: auto;
         height: auto;
     }
+	
+	.modal .input-rows {
+		display: table-row;
+		padding-bottom: 5px;
+	}
 	.modal form label {
-        padding: 1px 1px 1px 1px;
+        padding: 1px 10px 1px 1px;
+		text-align: left;
+		float: left;
+		
     }
-    .modal form table td {
-        display: run-in;
+	
+	.modal form input {
+		align: right-side;
+	}
+	
+    .modal form label,
+	.modal form input {
+        display: table-cell;
     }
 }

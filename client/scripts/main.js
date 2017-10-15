@@ -66,11 +66,6 @@ window.Babble = {
 // On page loading
 window.addEventListener('load', function() {
 
-	var addStylesNode = document.querySelector("#deferred-styles");
-    var replacement = document.createElement("div");
-    replacement.innerHTML = addStylesNode.textContent;
-    document.body.appendChild(replacement)
-    addStylesNode.parentElement.removeChild(addStylesNode);
     var form = document.querySelector('.js-growable');
     logIn(form);
     makeGrowable(document.querySelector('.expanding-textarea'));

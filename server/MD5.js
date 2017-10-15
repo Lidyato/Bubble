@@ -1,7 +1,8 @@
 (function(global, factory) {
     'use strict';
 
-    if (typeof module === 'object' && module.exports) {
+    // Based on: https://tools.ietf.org/html/rfc1321
+	if (typeof module === 'object' && module.exports) {
         module.exports = factory();
     } else {
         global.utils = factory();
@@ -10,7 +11,6 @@
     var messages = [];
     var messageID = 0;
     return {
-		// based on: https://en.wikipedia.org/wiki/MD5
 		MD5: function (string) {
 
 				function RotateLeft(lValue, iShiftBits) {
